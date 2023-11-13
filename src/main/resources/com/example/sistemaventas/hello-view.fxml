@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.example.sistemaventas.controlador.HelloTarea.*?>
+
+<?import javafx.scene.text.*?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemaventas.controlador.HelloController">
+   <children>
+      <TitledPane animated="false" text="TABLA">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="48.0" layoutY="28.0" prefHeight="28.0" prefWidth="69.0" text="CÓDIGO" />
+                  <Label layoutX="48.0" layoutY="70.0" prefHeight="28.0" prefWidth="69.0" text="NOMBRE" />
+                  <Label layoutX="48.0" layoutY="115.0" prefHeight="28.0" prefWidth="92.0" text="DESCRIPCION" />
+                   <TextField fx:id="codigoText" layoutX="156.0" layoutY="29.0" />
+                   <TextField fx:id="nombreText" layoutX="156.0" layoutY="72.0" />
+                   <TextField fx:id="descripcionText" layoutX="156.0" layoutY="117.0" />
+                  <Button layoutX="340.0" layoutY="22.0" mnemonicParsing="false" onAction="#onInsertarButtonClick" prefHeight="22.0" prefWidth="93.0" text="Guardar" fx:id="guardarBtn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="478.0" layoutY="21.0" mnemonicParsing="false" onAction="#onLimpiarButtonClick" prefHeight="42.0" prefWidth="91.0" text="Limpiar Datos" />
+                  <Button layoutX="367.0" layoutY="105.0" mnemonicParsing="false" onAction="#onSeleccionarButtonClick" prefHeight="34.0" prefWidth="67.0" text="Editar"  />
+                  <Button layoutX="488.0" layoutY="103.0" mnemonicParsing="false" onAction="#eliminarButtonClick" prefHeight="36.0" prefWidth="79.0" text="Eliminar" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TableView fx:id="tablaCategorias" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="133.0" text="CÓDIGO" />
+            <TableColumn fx:id="colNombre" prefWidth="177.0" text="NOMBRE" />
+            <TableColumn fx:id="colDescripcion" prefWidth="175.0" text="DESCRIPCIÓN" />
+            <TableColumn fx:id="colFechaCreacion" prefWidth="175.0" text="FECHA CREACIÓN" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
